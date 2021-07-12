@@ -9,17 +9,41 @@
         <div>
             <header>
                 <div id = "header">
-                    <img src = "assests/images/logo.png" alt = "logo" height = "100" width = "150">
-                    <a href = "login.html" target = "_blank">Login</a>
+                    <a href="index.html"><img src = "assests/images/logo.png" alt = "logo" height = "100" width = "150"></a>
+                    <a href = "login.html">Login</a>
                 </div>
             </header>
             <main>                        
                     <img src = "https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt = "Radisson Blu">
-                    <a href = "payment.html" >
-                        <div>
-                            <p>Book Now</p>
-                        </div>
-                    </a>
+                    <div>
+                        <table>
+                            <form action = "payment.html">
+                                <tr>
+                                    <th><label for = "number-adults">No. of Adults: </label></th>
+                                    <td><input id = "number-adults" type = "number" min = "1" max = "999" name = "adults" required></td>
+                                </tr>
+                                <tr>
+                                    <th><label for = "name">Name: </label></th>
+                                    <td><input id = "name" type ="text" maxlength="50" name = "host-name" required></td>
+                                </tr>
+                                <tr>
+                                    <th><label for = "checkin-date">Check-in date: </label></th>
+                                    <td><input id = "checkin-date" type ="date" name = "checkin-date" required></td>
+                                </tr>
+                                <tr>
+                                    <th><label for = "checkout-date">Check-out date: </label></th>
+                                    <td><input id = "checkout-date" type ="date" name = "checkout-date" required></td>
+                                </tr>
+                                <tr>
+                                    <th><label for = "total">Total: </label></th>
+                                    <td><input id = "total"  name = "total" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><button id = "book" name = "book">Book rooms</button></td>
+                                </tr>
+                            </form>
+                        </table>
+                    </div>
                     <p>Radisson Blu</p>
                     <p>5 Star</p>
                     <p>Features</p>
@@ -39,7 +63,7 @@
                     <a href = "https://www.facebook.com"><img src = "assests/images/facebook.png" height = "20px" width = "20px"></a>
                     <a href = "https://www.instagram.com"><img src = "assests/images/instagram.png" height = "20px" width = "20px"></a>
                     <a href = "https://twitter.com"><img src = "assests/images/twitter.png" height = "20px" width = "20px"></a>
-                    <p>&copy; 2020 HOTEL BOOKING PVT LTD</p>
+                    <p>&copy; 2021 HOTEL BOOKING PVT LTD</p>
                 </div>
             </footer>
         </div>
