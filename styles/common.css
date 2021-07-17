@@ -1,7 +1,8 @@
 html, body{
     height:100%;
-    background-color: antiquewhite;
+    background-color: rgb(206, 149, 76);
     width:100%;
+    margin:0;
 }
 main{
     height: 100%;

@@ -1,4 +1,18 @@
 .detail-img{
     height:500px;
     width:500px;
+    margin-top:2%;
+    margin-left:4%;
+    margin-RIGHT:4%;
+}
+table{
+    margin:0% 4% 1% 4%;
+}
+table th{
+    text-align: left;
+}
+
+#description{
+    margin:0% 4% 2% 4%;
+    padding-bottom: 2%;
 }
