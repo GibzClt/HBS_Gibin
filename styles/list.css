@@ -2,3 +2,9 @@
     height:200px;
     width: 250px;
 }
+
+#list-view div{
+    margin:2%;
+    background-color: peru;
+    width:40%;
+}

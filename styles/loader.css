@@ -1,0 +1,11 @@
+div{
+    height: 70px;
+    position: relative;
+    width: 70px;
+    border-radius: 50%;
+    top:50%;
+    margin: -70px auto;
+    bottom:50%;
+    border: 12px solid #f3f3f3;
+    border-top-color: #444444;
+}
