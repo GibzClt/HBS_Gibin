@@ -1,0 +1,23 @@
+html, body{
+    height:100%;
+    background-color: antiquewhite;
+    width:100%;
+}
+main{
+    height: 100%;
+    background-color: rgba(201, 144, 70, 0.14);
+    width:100%;
+}
+#logo{
+    height:60px;
+    width: 60px;
+    border-radius: 50%;
+}
+.city-img{
+    height: 150px;
+    width: 150px;
+}
+footer img{
+    height:20px;
+    width: 22px;
+}
