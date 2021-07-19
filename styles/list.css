@@ -5,6 +5,33 @@
 
 #list-view div{
     margin:2%;
-    background-color: peru;
+    background-color: rgb(132,136,139);
     width:40%;
+}
+
+
+#list li{
+    display: inline;
+    font-weight: bold;
+}
+#list{
+    width: fit-content;
+    margin:auto;
+}
+#list ul{
+    padding:0;
+    padding-inline-start:0;
+}
+#map-view{
+    display: none;
+}
+
+#rad-card{
+    float : left;
+}
+#lalit-card{
+    float : right;
+}
+#taj-card{
+    float:left;
 }
