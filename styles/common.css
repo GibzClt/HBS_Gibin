@@ -1,18 +1,28 @@
 html, body{
     height:100%;
-    background-color: rgb(206, 149, 76);
+    background-color: #e0e0e0;
     width:100%;
     margin:0;
+    font-family: 'Ubuntu', 'sans-serif';
 }
 main{
     height: 100%;
-    background-color: rgba(201, 144, 70, 0.14);
     width:100%;
+    padding-top: 8vmin;
+    overflow: auto;
+    padding-bottom: 8vmin;
 }
 #logo{
     height:60px;
     width: 60px;
     border-radius: 50%;
+}
+#login{
+    text-align: right;
+    float:right;
+    padding-top:1.2%;
+    padding-right: 1%;
+
 }
 .city-img{
     height: 150px;
@@ -21,4 +31,45 @@ main{
 footer img{
     height:20px;
     width: 22px;
+}
+#contact{
+    vertical-align: middle;
+    float:left;
+    padding-left:1%;
+    padding-top: 1.5%;
+}
+#social{
+    
+    float:right;
+    vertical-align: middle;
+    padding-right:1%;
+}
+#copyright{
+
+    margin:auto;
+    width:fit-content;
+    vertical-align:bottom;
+    padding-top:1%;
+}
+footer{
+    position: fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    width: 100%;
+    background-color: rosybrown;
+    height:8vmin;
+}
+
+header{
+    position: fixed;
+    top:0;
+    width: 100%;
+    background-color: rosybrown;
+    height: 8vmin;
+}
+
+a{
+    text-decoration: none;
+    color:black;
 }

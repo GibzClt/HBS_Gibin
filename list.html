@@ -6,34 +6,44 @@
         </title>
         <link rel="stylesheet" href="styles/common.css" type="text/css">
         <link rel="stylesheet" href="styles/list.css" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap">
     </head>
     <body>
         <div>
             <header>
                 <div id = "header">
                     <a href="index.html"><img id="logo" src = "assests/images/logo.png" alt = "logo" height = "100" width = "150"></a>
-                    <a href = "login.html">Login</a>
+                    <a id="login" href = "login.html">Login</a>
                 </div>
             </header>
             <main>
                 <div>
-                    <ul>
-                        <li><a href = "#list-view">List View</a></li>
-                        <li><a href = "#map-view">Map View</a></li>
-                    </ul>
+                    <div id="list">
+                        <ul >
+                            <li><a href = "#list-view">List View</a></li>&emsp;&emsp;&emsp;
+                            <li><a href = "#map-view">Map View</a></li>
+                        </ul>
+                    </div>
                     <div id="list-view">
                         <a href = "detail.html">
-                            <div>
+                            <div id = "rad-card">
                                 <img src = "https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt = "Radisson Blu">
-                                <br>
-                                <p>Radisson Blu</p>
+                                <h3>Radisson Blu</h3>
+                                <p>5.0 star</p>
+                                <p>New Delhi</p>
                             </div>
                         </a>
-                        <div>
+                        <div id = "lalit-card">
                             <img src = "https://media-cdn.tripadvisor.com/media/photo-w/15/06/31/5f/facade.jpg" alt = "The Lalit Hotel">
+                                <h3>The Lalit New Delhi</h3>
+                                <p>4.5 star</p>
+                                <p>New Delhi</p>
                         </div>
-                        <div>
+                        <div id = "taj-card">
                             <img src = "https://media-cdn.tripadvisor.com/media/photo-w/1b/4e/9b/11/exterior.jpg" alt = "Taj Palace">
+                                <h3>Taj Palace</h3>
+                                <p>4.0 star</p>
+                                <p>New Delhi</p>
                         </div>
                     </div>
                     <div id="map-view">
@@ -44,12 +54,14 @@
             </main>
             <footer>
                 <div>
-                    <a href = "contact.html">Contact us</a>
+                    <a id="contact" href = "contact.html">Contact us</a>
                     <br>
-                    <a href = "https://www.facebook.com"><img src = "assests/images/facebook.png" height = "20px" width = "20px"></a>
-                    <a href = "https://www.instagram.com"><img src = "assests/images/instagram.png" height = "20px" width = "20px"></a>
-                    <a href = "https://twitter.com"><img src = "assests/images/twitter.png" height = "20px" width = "20px"></a>
-                    <p>&copy; 2021 HOTEL BOOKING PVT LTD</p>
+                    <div id="social">
+                        <a href = "https://www.facebook.com"><img src = "assests/images/facebook.png" height = "20px" width = "20px"></a>
+                        <a href = "https://www.instagram.com"><img src = "assests/images/instagram.png" height = "20px" width = "20px"></a>
+                        <a href = "https://twitter.com"><img src = "assests/images/twitter.png" height = "20px" width = "20px"></a>
+                    </div>
+                    <p id="copyright">&copy; 2021 HOTEL BOOKING PVT LTD</p>
                 </div>
             </footer>
         </div>
