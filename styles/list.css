@@ -3,9 +3,9 @@
     width: 250px;
 }
 
-#list-view div{
+#list-view > div{
     margin:2%;
-    background-color: rgb(132,136,139);
+    background-color: lightgrey;
     width:40%;
 }
 
@@ -34,4 +34,20 @@
 }
 #taj-card{
     float:left;
+}
+
+.hotel-card div{
+    margin:0;
+}
+/* .hotel-card-desc
+} */
+.hotel-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.hotel-card > *:last-child{
+    margin-left: 2%;
 }
