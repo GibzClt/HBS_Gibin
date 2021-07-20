@@ -11,10 +11,8 @@
     <body>
         <div>
             <header>
-                <div id = "header">
-                    <a href="index.html"><img id="logo" src = "assests/images/logo.png" alt = "logo" height = "100" width = "150"></a>
-                    <a id="login" href = "login.html">Login</a>
-                </div>
+                <img id= "logo" src = "assests/images/logo.png" alt = "logo" height = "100" width = "150">
+                <a id="login" href = "login.html" >Login</a>
             </header>
             <main>
                 <div>
@@ -25,25 +23,37 @@
                         </ul>
                     </div>
                     <div id="list-view">
-                        <a href = "detail.html">
-                            <div id = "rad-card">
-                                <img src = "https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt = "Radisson Blu">
-                                <h3>Radisson Blu</h3>
-                                <p>5.0 star</p>
-                                <p>New Delhi</p>
+                        <div  id = "rad-card" >
+                            <a class="hotel-card" href = "detail.html">
+                                <div >
+                                    <img src = "https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt = "Radisson Blu">
+                                </div>
+                                <div >
+                                    <h3>Radisson Blu</h3>
+                                    <p>5.0 star</p>
+                                    <p>New Delhi</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="hotel-card" id = "lalit-card">
+                            <div>
+                                <img src = "https://media-cdn.tripadvisor.com/media/photo-w/15/06/31/5f/facade.jpg" alt = "The Lalit Hotel">
                             </div>
-                        </a>
-                        <div id = "lalit-card">
-                            <img src = "https://media-cdn.tripadvisor.com/media/photo-w/15/06/31/5f/facade.jpg" alt = "The Lalit Hotel">
+                            <div>
                                 <h3>The Lalit New Delhi</h3>
                                 <p>4.5 star</p>
                                 <p>New Delhi</p>
+                            </div>
                         </div>
-                        <div id = "taj-card">
-                            <img src = "https://media-cdn.tripadvisor.com/media/photo-w/1b/4e/9b/11/exterior.jpg" alt = "Taj Palace">
+                        <div class="hotel-card" id = "taj-card">
+                            <div>
+                                <img src = "https://media-cdn.tripadvisor.com/media/photo-w/1b/4e/9b/11/exterior.jpg" alt = "Taj Palace">
+                            </div>
+                            <div>
                                 <h3>Taj Palace</h3>
                                 <p>4.0 star</p>
                                 <p>New Delhi</p>
+                            </div>
                         </div>
                     </div>
                     <div id="map-view">
@@ -53,16 +63,13 @@
                 </div>
             </main>
             <footer>
-                <div>
-                    <a id="contact" href = "contact.html">Contact us</a>
-                    <br>
-                    <div id="social">
-                        <a href = "https://www.facebook.com"><img src = "assests/images/facebook.png" height = "20px" width = "20px"></a>
-                        <a href = "https://www.instagram.com"><img src = "assests/images/instagram.png" height = "20px" width = "20px"></a>
-                        <a href = "https://twitter.com"><img src = "assests/images/twitter.png" height = "20px" width = "20px"></a>
-                    </div>
-                    <p id="copyright">&copy; 2021 HOTEL BOOKING PVT LTD</p>
+                <a id="contact" href = "contact.html">Contact us</a>
+                <div id="social">
+                    <a href = "https://www.facebook.com"><img src = "assests/images/facebook.png" height = "20px" width = "20px"></a>
+                    <a href = "https://www.instagram.com"><img src = "assests/images/instagram.png" height = "20px" width = "20px"></a>
+                    <a href = "https://twitter.com"><img src = "assests/images/twitter.png" height = "20px" width = "20px"></a>
                 </div>
+                <p id="copyright">&copy; 2021 HOTEL BOOKING PVT LTD</p>
             </footer>
         </div>
     </body>

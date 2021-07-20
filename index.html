@@ -11,10 +11,8 @@
     <body>
         <div>
             <header>
-                <div id = "header">
                     <img id= "logo" src = "assests/images/logo.png" alt = "logo" height = "100" width = "150">
                     <a id="login" href = "login.html" >Login</a>
-                </div>
             </header>
             <main>
                 <div id = "content">
@@ -26,10 +24,20 @@
                         </form>
                     </div>
                     <div id="citycards">
-                        <a href = "list.html" target = "_blank"><img class="city-img" src = "https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" alt = "New Delhi" height="200px" width = "200px"></a>
-                        <img class="city-img" src = "https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" alt = "Goa" height="200px" width = "200px"> 
-                        <img class="city-img" src = "https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" alt = "Hyderabad" height="200px" width = "200px"> 
-                        <img class="city-img" src = "https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg" alt = "Kolkata" height="200px" width = "200px"> 
+                        <div  id="delhi-img">
+                            <a href = "list.html" target = "_blank">
+                                <div class="card-overlay">Delhi</div>
+                            </a>
+                        </div>
+                        <div  id="goa-img">
+                            <div class="card-overlay">Goa</div>
+                        </div>
+                        <div  id="charminar-img">
+                            <div class="card-overlay">Charminar</div>
+                        </div>
+                        <div  id="calcutta-img">
+                            <div class="card-overlay">Calcutta</div>
+                        </div>  
                     </div>
                     <div id="view-more">
                         <a href = "index.html" > View more &gt; &gt;</a>
@@ -38,16 +46,13 @@
                 </div>
             </main>
             <footer>
-                <div>
                     <a id="contact" href = "contact.html">Contact us</a>
-                    <br>
                     <div id="social">
                         <a href = "https://www.facebook.com"><img src = "assests/images/facebook.png" height = "20px" width = "20px"></a>
                         <a href = "https://www.instagram.com"><img src = "assests/images/instagram.png" height = "20px" width = "20px"></a>
                         <a href = "https://twitter.com"><img src = "assests/images/twitter.png" height = "20px" width = "20px"></a>
                     </div>
                     <p id="copyright">&copy; 2021 HOTEL BOOKING PVT LTD</p>
-                </div>
             </footer>
         </div>
     </body>

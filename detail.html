@@ -9,69 +9,64 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap">
     </head>
     <body>
-        <div>
             <header>
-                <div id = "header">
-                    <a href="index.html"><img id="logo" src = "assests/images/logo.png" alt = "logo"></a>
-                    <a id="login" href = "login.html">Login</a>
-                </div>
+                <img id= "logo" src = "assests/images/logo.png" alt = "logo" height = "100" width = "150">
+                <a id="login" href = "login.html" >Login</a>
             </header>
-            <main>                        
-                    <img class = "detail-img"src = "https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt = "Radisson Blu">
-                    <div>
-                        <table>
-                            <form action = "payment.html">
-                                <tr>
-                                    <th><label for = "number-adults">No. of Adults: </label></th>
-                                    <td><input id = "number-adults" type = "number" min = "1" max = "999" name = "adults" required></td>
-                                </tr>
-                                <tr>
-                                    <th><label for = "name">Name: </label></th>
-                                    <td><input id = "name" type ="text" maxlength="50" name = "host-name" required></td>
-                                </tr>
-                                <tr>
-                                    <th><label for = "checkin-date">Check-in date: </label></th>
-                                    <td><input id = "checkin-date" type ="date" name = "checkin-date" required></td>
-                                </tr>
-                                <tr>
-                                    <th><label for = "checkout-date">Check-out date: </label></th>
-                                    <td><input id = "checkout-date" type ="date" name = "checkout-date" required></td>
-                                </tr>
-                                <tr>
-                                    <th><label for = "total">Total: </label></th>
-                                    <td><input id = "total"  name = "total" readonly></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2"><button id = "book" name = "book">Book rooms</button></td>
-                                </tr>
-                            </form>
-                        </table>
+            <main>  
+                <div id="detail-box">
+                    <div>   
+                    </div>
+                    <div>        
+                        <form id="detail-form" action = "payment.html">
+                            <div>
+                                <label for = "number-adults">No. of Adults: </label>
+                                <input id = "number-adults" type = "number" min = "1" max = "999" name = "adults" required>
+                            </div>
+                            <div>
+                                <label for = "name">Name: </label>
+                                <input id = "name" type ="text" maxlength="50" name = "host-name" required>
+                            </div>
+                            <div>
+                                <label for = "checkin-date">Check-in date: </label></th>
+                                <input id = "checkin-date" type ="date" name = "checkin-date" required>
+                            </div>
+                            <div>
+                                <label for = "checkout-date">Check-out date: </label></th>
+                                <input id = "checkout-date" type ="date" name = "checkout-date" required>
+                            </div>
+                            <div>
+                                <label for = "total">Total: </label></th>
+                                <input id = "total"  name = "total" readonly>
+                            </div>
+                            <div id ="book-btn">
+                                <button id = "book" name = "book">Book rooms</button>
+                            </div>
+                        </form>
+                        </div>
                     </div>
                     <div id="description">
-                        <p>Radisson Blu</p>
+                        <h3>Radisson Blu</h3>
+                        <h4>Ratings</h4>
                         <p>5 Star</p>
-                        <p>Features</p>
+                        <h4>Features</h4>
                         <ul>
                             <li>Delicious Food</li>
                             <li>Hygenic</li>
                             <li>Excellant Service</li>
                         </ul>
-                        <p>Description</p>
+                        <h4>Description</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
             </main>
             <footer>
-                <div>
-                    <a id="contact" href = "contact.html">Contact us</a>
-                    <br>
-                    <div id="social">
-                        <a href = "https://www.facebook.com"><img src = "assests/images/facebook.png" height = "20px" width = "20px"></a>
-                        <a href = "https://www.instagram.com"><img src = "assests/images/instagram.png" height = "20px" width = "20px"></a>
-                        <a href = "https://twitter.com"><img src = "assests/images/twitter.png" height = "20px" width = "20px"></a>
-                    </div>
-                    <p id="copyright">&copy; 2021 HOTEL BOOKING PVT LTD</p>
+                <a id="contact" href = "contact.html">Contact us</a>
+                <div id="social">
+                    <a href = "https://www.facebook.com"><img src = "assests/images/facebook.png" height = "20px" width = "20px"></a>
+                    <a href = "https://www.instagram.com"><img src = "assests/images/instagram.png" height = "20px" width = "20px"></a>
+                    <a href = "https://twitter.com"><img src = "assests/images/twitter.png" height = "20px" width = "20px"></a>
                 </div>
+                <p id="copyright">&copy; 2021 HOTEL BOOKING PVT LTD</p>
             </footer>
-        </div>
     </body>
 </html>
