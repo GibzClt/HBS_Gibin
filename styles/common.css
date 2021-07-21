@@ -9,7 +9,7 @@ main{
     height: 100%;
     width:100%;
     padding-top: 8vmin;
-    overflow: auto;
+    /* overflow: auto; */
     padding-bottom: 8vmin;
 }
 #logo{
@@ -32,6 +32,9 @@ footer img{
 #social{
     order:1;
     margin-right:2%;
+    display: flex;
+    justify-content: space-between;
+    width:6%;
 }
 
 footer{
@@ -63,4 +66,11 @@ header{
 a{
     text-decoration: none;
     color:black;
+}
+a:hover{
+    text-decoration: none;
+    color:black;
+}
+#copyright{
+    margin-top:1%;
 }
