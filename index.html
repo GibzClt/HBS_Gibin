@@ -4,10 +4,11 @@
         <title>
             Index
         </title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap">
         <link rel="stylesheet" href="styles/common.css" type = "text/css">
         <link rel="stylesheet" href="styles/index.css" type = "text/css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     </head>
@@ -20,11 +21,10 @@
             <main>
                 <div id = "content">
                     <div id="search-bar-img">
-                        <form id="search-bar">
-                            <label for = "city">
-                                <input id = "city" type = "text" name = "city-name" placeholder="City">
-                            </label>
-                        </form>
+                        <div id="search-bar">
+                            <label for = "city"></label>
+                            <input id = "city" type = "text" name = "city-name" placeholder="City">
+                        </div>
                     </div>
                     <div id="citycards">
                         <div  id="delhi-img">
@@ -123,7 +123,9 @@
                         <a href = "https://www.instagram.com"><img src = "assests/images/instagram.png" height = "20px" width = "20px"></a>
                         <a href = "https://twitter.com"><img src = "assests/images/twitter.png" height = "20px" width = "20px"></a>
                     </div>
-                    <p id="copyright">&copy; 2021 HOTEL BOOKING PVT LTD</p>
+                    <div id="copyright">
+                        <p>&copy; 2021 HOTEL BOOKING PVT LTD</p>
+                    </div>
             </footer>
         </div>
 
