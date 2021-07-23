@@ -14,54 +14,56 @@
     <body>
         <div>
             <header>
-                <a href="index.html"><img id= "logo" src = "assests/images/logo.png" alt = "logo" height = "100" width = "150"></a>
+                <a id="logo-link" href="index.html"><img id= "logo" src = "assests/images/logo.png" alt = "logo" height = "100" width = "150"></a>
                 <button id="login" class="btn btn-light" data-toggle="modal" data-target="#loginModal">Login</button>
             </header>
             <main>
                 <div>
                     <div id="list">
-                        <ul >
-                            <li><a href = "#list-view">List View</a></li>&emsp;&emsp;&emsp;
-                            <li><a href = "#map-view">Map View</a></li>
+                        <ul class="nav nav-pills">
+                            <li class="nav-item"><a class="nav-link active" data-toggle="pill" href = "#list-view">List View</a></li>
+                            <li class="nav-item"><a class="nav-link" data-toggle="pill" href = "#map-view">Map View</a></li>
                         </ul>
                     </div>
-                    <div id="list-view">
-                        <div  id = "rad-card" >
-                            <a class="hotel-card" href = "detail.html">
-                                <div >
-                                    <img src = "https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt = "Radisson Blu">
+                    <div class="tab-content">
+                        <div id="list-view" class="tab-pane fade show active">
+                            <div  id = "rad-card">
+                                <a class="hotel-card" href = "detail.html">
+                                    <div >
+                                        <img src = "https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt = "Radisson Blu">
+                                    </div>
+                                    <div >
+                                        <h3>Radisson Blu</h3>
+                                        <p>5.0 star</p>
+                                        <p>New Delhi</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="hotel-card" id = "lalit-card">
+                                <div>
+                                    <img src = "https://media-cdn.tripadvisor.com/media/photo-w/15/06/31/5f/facade.jpg" alt = "The Lalit Hotel">
                                 </div>
-                                <div >
-                                    <h3>Radisson Blu</h3>
-                                    <p>5.0 star</p>
+                                <div>
+                                    <h3>The Lalit New Delhi</h3>
+                                    <p>4.5 star</p>
                                     <p>New Delhi</p>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="hotel-card" id = "lalit-card">
-                            <div>
-                                <img src = "https://media-cdn.tripadvisor.com/media/photo-w/15/06/31/5f/facade.jpg" alt = "The Lalit Hotel">
                             </div>
-                            <div>
-                                <h3>The Lalit New Delhi</h3>
-                                <p>4.5 star</p>
-                                <p>New Delhi</p>
-                            </div>
-                        </div>
-                        <div class="hotel-card" id = "taj-card">
-                            <div>
-                                <img src = "https://media-cdn.tripadvisor.com/media/photo-w/1b/4e/9b/11/exterior.jpg" alt = "Taj Palace">
-                            </div>
-                            <div>
-                                <h3>Taj Palace</h3>
-                                <p>4.0 star</p>
-                                <p>New Delhi</p>
+                            <div class="hotel-card" id = "taj-card">
+                                <div>
+                                    <img src = "https://media-cdn.tripadvisor.com/media/photo-w/1b/4e/9b/11/exterior.jpg" alt = "Taj Palace">
+                                </div>
+                                <div>
+                                    <h3>Taj Palace</h3>
+                                    <p>4.0 star</p>
+                                    <p>New Delhi</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="map-view">
-                        <img src = "https://cdn.pixabay.com/photo/2018/01/31/05/43/web-3120321_960_720.png" alt = "map">
-                        <p>Map view</p>
+                        <div id="map-view" class="tab-pane fade">
+                            <img src = "https://cdn.pixabay.com/photo/2018/01/31/05/43/web-3120321_960_720.png" alt = "map">
+                            <p>Map view</p>
+                        </div>
                     </div>            
                 </div>
                 <div class="modal fade" id="loginModal" data-backdrop="static">
@@ -73,67 +75,61 @@
                             <span aria-hidden="true">&times;</span>
                           </buttom>
                         </div>
-                        <form id="login-form" action = "index.html">
                         <div class="modal-body">
-                            <table>
-                              <tr>
-                                <th><label for ="email" >Email Address: </label></th>
-                                <td><input id = "email" name = "email" type = "email" required placeholder="yourname@email.com" autocomplete="off"></td>
-                              </tr>
-                              <tr>
-                                <th><label for ="password" >Password: </label></th>
-                                <td><input id = "password" name = "password" type = "password" required  placeholder="*******" autocomplete="off"></td>
-                              </tr>
-                            </table>
+                          <form id="login-form" action = "index.html">
+                            <div class="form-group">
+                                <label for ="email">Email Address</label>
+                                <input id="email" name="email" type="email" class="form-control" required placeholder="yourname@email.com" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label for ="password" >Password</label>
+                                <input id="password" name="password" type="password" class="form-control" required  placeholder="*******" autocomplete="off">
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="remember">
+                                <label class="form-check-label" for="remember">Remember me</label>
+                            </div>
+                            <button class="btn btn-primary btn-block rounded-pill" type="submit" name="submit" >
+                              Login
+                            </button>
+                          </form>
                         </div>
-                        <div class="modal-footer">
-                          <button class="btn btn-primary btn-block rounded-pill" type="submit" name="submit" >
-                            Login
-                          </button>
-                        </div>
-                      </form>   
                       </div>
                     </div>
-                  </div>
-                  <div class="modal fade" id="contactModal">
+                </div>
+                <div class="modal fade" id="contactModal">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title w-100 text-center">Contact us</h5>
+                                <h5 class="modal-title w-100 text-center">&#9993; Contact us &#9993;</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body border-bottom-0">
-                                <form id = "contact-form" action = "index.html">
+                                <div class="text-center">
                                     <p>Thank you for reaching out to us!</p>
-                                    <p>Our team will get in touch with you soon</p>
-                                    <table>
-                                        <tr>
-                                            <th><label for = "name">Name</label></th>
-                                            <td>&emsp;:&emsp;</td>
-                                            <td><input id ="name" type = "text" name = "name" required placeholder="Jose Markose"></td>
-                                        </tr>
-                                        <tr>
-                                            <th><label for = "email">Email</label></th>
-                                            <td>&emsp;:&emsp;</td>
-                                            <td><input id ="email" type = "email" name = "email" required placeholder="yourname@email.com"></td>
-                                        </tr>
-                                        <tr>
-                                            <th><label for = "phone">Mobile</label></th>
-                                            <td>&emsp;:&emsp;</td>
-                                            <td><input id ="phone" type ="text" name = "phone" required placeholder="(+91)__________"></td>
-                                        </tr>
-                                    </table>
-                                    <br>
+                                    <p>Our team will get in touch with you soon &#128515;</p>
+                                </div>
+                                <form id = "contact-form" action = "index.html">
+                                        <div class="form-group">
+                                            <label for = "name">Name</label>
+                                            <input id ="name" class="form-control" type = "text" name = "name" required placeholder="Jose Markose">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for = "email">Email</label>
+                                            <input id ="email" class="form-control" type = "email" name = "email" required placeholder="yourname@email.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for = "phone">Mobile</label>
+                                            <input id ="phone" class="form-control" type ="text" name = "phone" required placeholder="(+91)__________">
+                                        </div>
                                     <div class="text-center">
-                                        <button class="btn btn-primary rounded-pill m-auto" type="submit" id="submit-btn" name="submit-contact">
+                                        <button class="btn btn-primary rounded-pill ml-auto mr-auto" type="submit" id="contact-btn" name="submit-contact">
                                             <span>Contact me</span>
                                         </button>
                                     </div>
                                 </form>
-                            </div>
-                            <div class="modal-footer" border-0>
                             </div>
                         </div>
                     </div>

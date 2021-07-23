@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="styles/common.css" >
     </head>
     <body>
         <button class="btn btn-light" data-toggle="modal" data-target="#loginModal">Login</button>
@@ -21,27 +22,25 @@
                   <span aria-hidden="true">&times;</span>
                 </buttom>
               </div>
-              <form id="login-form" action = "index.html">
               <div class="modal-body">
-                  <table>
-                    <tr>
-                      <th><label for ="email" >Email Address</label></th>
-                      <td>&emsp;:&emsp;</td>
-                      <td><input id = "email" name = "email" type = "email" required placeholder="yourname@email.com" autocomplete="off"></td>
-                    </tr>
-                    <tr>
-                      <th><label for ="password" >Password</label></th>
-                      <td>&emsp;:&emsp;</td>
-                      <td><input id = "password" name = "password" type = "password" required  placeholder="*******" autocomplete="off"></td>
-                    </tr>
-                  </table>
+                <form id="login-form" action = "index.html">
+                  <div class="form-group">
+                      <label for ="email">Email Address</label>
+                      <input id="email" name="email" type="email" class="form-control" required placeholder="yourname@email.com" autocomplete="off">
+                  </div>
+                  <div class="form-group">
+                      <label for ="password" >Password</label>
+                      <input id="password" name="password" type="password" class="form-control" required  placeholder="*******" autocomplete="off">
+                  </div>
+                  <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="remember">
+                      <label class="form-check-label" for="remember">Remember me</label>
+                  </div>
+                  <button class="btn btn-primary btn-block rounded-pill" type="submit" name="submit" >
+                    Login
+                  </button>
+                </form>
               </div>
-              <div class="modal-footer">
-                <button class="btn btn-primary btn-block rounded-pill" type="submit" name="submit" >
-                  Login
-                </button>
-              </div>
-            </form>   
             </div>
           </div>
         </div>

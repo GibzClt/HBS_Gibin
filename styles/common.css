@@ -18,6 +18,9 @@ main{
     border-radius: 50%;
     margin-left: 1%;
 }
+#logo-link{
+    margin-left:1%;
+}
 #login{
     margin-right: 2%;
 }
@@ -73,4 +76,10 @@ a:hover{
 }
 #copyright{
     margin-top:1%;
+}
+.form-check{
+    margin-bottom:4%;
+}
+#contact-btn{
+    margin-top: 4%;
 }
