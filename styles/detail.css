@@ -1,10 +1,9 @@
 .detail-img{
     height:500px;
     width:500px;
-    margin-top:2%;
-    margin-left:4%;
-    margin-RIGHT:4%;
+    margin:auto;
 }
+
 table{
     margin:0% 4% 1% 4%;
 }
@@ -22,19 +21,19 @@ table th{
     margin:4% 2%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     border: 1px solid black;
     justify-content: center;
 }
-#detail-box > *:first-child{
-    max-height: 400px;
-    margin:1% 0;
-    flex-grow: 4;
-    background-image: url("https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+/* #detail-box > *:first-child{ */
+    /* height:400px; */
+    /* margin:1% 0; */
+    /* flex-grow: 4; */
+    /* background-image: url("https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"); */
+    /* background-size: contain; */
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+/* } */
 #detail-box > *:last-child{
     max-height:400px;
     margin: 1% 0;
@@ -46,7 +45,7 @@ form div{
     padding: 0 4%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: space-between;
 }
 form input{
@@ -67,4 +66,31 @@ form{
 }
 h3, h4{
     font-family: cursive;
+}
+
+#detail-carousel > div{
+    max-height: 400px;
+    max-width:80%;
+    margin: auto;
+}
+#detail-carousel{
+    max-height:400px;
+    /* background-color:indianred; */
+    width:70%;
+    
+}
+main{
+    overflow: auto;
+}
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23bc8f8f' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    /* width: 55px; */
+    /* height:55px; */
+}
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23bc8f8f' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+.carousel-control{
+    height: 55px;
+    width:55px;
 }
