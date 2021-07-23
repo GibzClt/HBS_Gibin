@@ -9,11 +9,10 @@
     width:40%;
 }
 
-
-#list li{
-    display: inline;
-    font-weight: bold;
+#list-view >div:hover{
+    background: rosybrown;
 }
+
 #list{
     width: fit-content;
     margin:auto;
@@ -22,8 +21,12 @@
     padding:0;
     padding-inline-start:0;
 }
+#list-view{
+    height:100vh;
+}
 #map-view{
-    display: none;
+    height:100vh;
+    width:100%;
 }
 
 #rad-card{
@@ -39,8 +42,7 @@
 .hotel-card div{
     margin:0;
 }
-/* .hotel-card-desc
-} */
+
 .hotel-card{
     display: flex;
     flex-direction: row;
@@ -50,4 +52,8 @@
 
 .hotel-card > *:last-child{
     margin-left: 2%;
+}
+
+.hotel-card div:first-child{
+    object-fit: cover;
 }

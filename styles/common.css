@@ -9,7 +9,7 @@ main{
     height: 100%;
     width:100%;
     padding-top: 8vmin;
-    overflow: auto;
+    /* overflow: auto; */
     padding-bottom: 8vmin;
 }
 #logo{
@@ -17,6 +17,9 @@ main{
     width: 60px;
     border-radius: 50%;
     margin-left: 1%;
+}
+#logo-link{
+    margin-left:1%;
 }
 #login{
     margin-right: 2%;
@@ -32,6 +35,9 @@ footer img{
 #social{
     order:1;
     margin-right:2%;
+    display: flex;
+    justify-content: space-between;
+    width:6%;
 }
 
 footer{
@@ -63,4 +69,17 @@ header{
 a{
     text-decoration: none;
     color:black;
+}
+a:hover{
+    text-decoration: none;
+    color:black;
+}
+#copyright{
+    margin-top:1%;
+}
+.form-check{
+    margin-bottom:4%;
+}
+#contact-btn{
+    margin-top: 4%;
 }
