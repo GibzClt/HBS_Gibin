@@ -4,6 +4,7 @@
         <title>
             List
         </title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="styles/common.css" type="text/css">
@@ -34,7 +35,7 @@
                                     <div >
                                         <img src = "https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt = "Radisson Blu">
                                     </div>
-                                    <div >
+                                    <div class="hotel-desc">
                                         <h3>Radisson Blu</h3>
                                         <i class="fas fa-star star-rate"></i>
                                         <i class="fas fa-star star-rate"></i>
@@ -49,7 +50,7 @@
                                 <div>
                                     <img src = "https://media-cdn.tripadvisor.com/media/photo-w/15/06/31/5f/facade.jpg" alt = "The Lalit Hotel">
                                 </div>
-                                <div>
+                                <div class="hotel-desc">
                                     <h3>The Lalit New Delhi</h3>
                                     <i class="fas fa-star star-rate"></i>
                                     <i class="fas fa-star star-rate"></i>
@@ -63,7 +64,7 @@
                                 <div>
                                     <img src = "https://media-cdn.tripadvisor.com/media/photo-w/1b/4e/9b/11/exterior.jpg" alt = "Taj Palace">
                                 </div>
-                                <div>
+                                <div class="hotel-desc">
                                     <h3>Taj Palace</h3>
                                     <i class="fas fa-star star-rate"></i>
                                     <i class="fas fa-star star-rate"></i>
@@ -76,7 +77,7 @@
                         </div>
                         <div id="map-view" class="tab-pane fade">
                             <img src = "https://cdn.pixabay.com/photo/2018/01/31/05/43/web-3120321_960_720.png" alt = "map">
-                            <p>Map view</p>
+                            <!-- <p>Map view</p> -->
                         </div>
                     </div>            
                 </div>
@@ -131,8 +132,8 @@
                                             <input id ="name" class="form-control" type = "text" name = "name" required placeholder="Jose Markose">
                                         </div>
                                         <div class="form-group">
-                                            <label for = "email">Email</label>
-                                            <input id ="email" class="form-control" type = "email" name = "email" required placeholder="yourname@email.com">
+                                            <label for = "email-contact">Email</label>
+                                            <input id ="email-contact" class="form-control" type = "email" name = "email" required placeholder="yourname@email.com">
                                         </div>
                                         <div class="form-group">
                                             <label for = "phone">Mobile</label>
@@ -150,6 +151,7 @@
                 </div>
             </main>
             <footer>
+                
                 <button id="contact" class="btn btn-info" data-toggle="modal" data-target="#contactModal">Contact us</button>
                 <div id="social">
                     <a href = "https://www.facebook.com"><img src = "assests/images/facebook.png" height = "20px" width = "20px"></a>

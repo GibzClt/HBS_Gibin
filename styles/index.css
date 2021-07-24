@@ -100,6 +100,11 @@
         justify-content: center;
         align-items: center;
     }
+    main{
+        padding-top:4%;
+        padding-bottom:8%;
+        box-sizing: border-box;
+    }
     #search-bar{
         width:40vw;
         margin: auto;
@@ -119,7 +124,7 @@
     }
 }
 
-@media only screen and (min-width:576px) and (max-width: 767px){
+@media only screen and (min-width:576px) and (max-width: 768px){
     #citycards{
         display:grid;
         width:100%;
@@ -128,6 +133,7 @@
         grid-row-gap: 10%;
         justify-items: center;
     }
+    
     #content{
         /* margin-top:10%; */
         margin-bottom:10%;
