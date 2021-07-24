@@ -1,123 +1,135 @@
-.payment-img{
-    height:270px;
-    width: 300px;
+.payment-img {
+  height: 270px;
+  width: 300px;
 }
 
-#payment-hotel{
-    height:fit-content;
-    width:50%;
-    display:flex;
-    background-color: rgb(132, 136, 139);
-    margin:auto;
-    /* margin-top: 2%; */
-    /* padding-bottom:2%; */
+#payment-hotel {
+  height: fit-content;
+  width: 50%;
+  display: flex;
+  background-color: rgb(132, 136, 139);
+  margin: auto;
 }
 
-#payment-hotel div{
-    margin-left: 4%;
+#payment-hotel div {
+  margin-left: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+h2,
+h3,
+h4{
+  font-family: cursive;
+}
+
+span {
+  padding-bottom: 1%;
+}
+
+#bill {
+  background-color: rosybrown;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 2%;
+  margin-bottom: 4%;
+  padding: 1% 0;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#bill span {
+  padding-bottom: 0;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+/* Media Queries */
+
+/* Small screens */
+@media only screen and (max-width: 575px) {
+  main {
+    width: 100%;
+    margin-top: 12%;
+    overflow: auto;
+    margin-bottom: 10%;
+    padding-top: 10%;
+    padding-bottom: 20%;
+    position: relative;
+    box-sizing: border-box;
+    display: block;      
+  }
+
+  #payment-hotel {
+      height: 80%;
+      width: 98%;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      margin-bottom: 10%;
+  }
+
+  .payment-img {
+      height: 60%;
+      width: 85%;
+      margin: 2% auto;
+  }
+
+  #payment-hotel div {
+      width: 100%;
+      margin: 4% auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      align-items: center;
+  }
+
+  #bill {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 0 2%;
+      margin-bottom: 4%;
+      padding: 2% 2%;
+      border: 1px solid black;
+      border-radius: 5px;
+  }
+
+  #payment-details {
+      width: 100%;
+  }
+}
+
+/* Medium sized screens */
+@media only screen and (min-width:576px) and (max-width: 768px) {
+  main {
+    height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-h2, h3, h4{
-    font-family: cursive;
-}
-span{
-    padding-bottom: 1%;
-}
-#bill{
-    background-color: rosybrown;
-    display:flex;
-    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    margin:0 2%;
-    margin-bottom:4%;
-    padding: 1% 0;
-    border: 1px solid black;
-    border-radius: 5px;
-}
-#bill span{
-    padding-bottom:0;
-    font-family: cursive;
-    font-weight: bold;
-}
-/* Media Queries */
-@media only screen and (max-width: 575px ){
-    main{
-        width:100%;
-        margin-top: 12%;
-        overflow: auto;
-        margin-bottom: 10%;
-        padding-top:10%;
-        padding-bottom:20%;
-        position:relative;
-        box-sizing: border-box;
-        display: block;
-        
-    }
-    #payment-hotel{
-        height:80%;
-        width:98%;
-        display:flex;
-        flex-direction: column;
-        margin:auto;
-        margin-bottom:10%;
-    }
-    .payment-img{
-        height:60%;
-        width: 85%;
-        margin: 2% auto;
-    }
-    #payment-hotel div{
-        width:100%;
-        margin:4% auto;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: stretch;
-        align-items: center;
-    }
-    #bill{
-        margin: auto;
-        display:flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        margin:0 2%;
-        margin-bottom:4%;
-        padding: 2% 2%;
-        border: 1px solid black;
-        border-radius: 5px;
-    }
-    #payment-details{
-        width: 100%;
-    }
-}
+    overflow: auto;
+  }
+  #payment-hotel {
+    height: fit-content;
+    width: 80%;
+    display: flex;
+    background-color: rgb(132, 136, 139);
+    margin: 0 auto;
+  }
 
-@media only screen and (min-width:576px) and (max-width: 768px){
-    main{
-        height:80%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        overflow: auto;
-    }
-    #payment-hotel{
-        height:fit-content;
-        width:80%;
-        display:flex;
-        background-color: rgb(132, 136, 139);
-        margin: 0 auto;
-    }
-    #bill{
-        width:95%;
-    }
+  #bill {
+    width: 95%;
+  }
 }
