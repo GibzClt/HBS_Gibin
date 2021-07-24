@@ -1,6 +1,6 @@
 .payment-img{
     height:270px;
-    width: 300px;;
+    width: 300px;
 }
 
 #payment-hotel{
@@ -18,7 +18,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 main{
@@ -36,7 +35,6 @@ span{
     background-color: rosybrown;
     display:flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     margin:0 2%;
@@ -49,4 +47,77 @@ span{
     padding-bottom:0;
     font-family: cursive;
     font-weight: bold;
+}
+/* Media Queries */
+@media only screen and (max-width: 575px ){
+    main{
+        width:100%;
+        margin-top: 12%;
+        overflow: auto;
+        margin-bottom: 10%;
+        padding-top:10%;
+        padding-bottom:20%;
+        position:relative;
+        box-sizing: border-box;
+        display: block;
+        
+    }
+    #payment-hotel{
+        height:80%;
+        width:98%;
+        display:flex;
+        flex-direction: column;
+        margin:auto;
+        margin-bottom:10%;
+    }
+    .payment-img{
+        height:60%;
+        width: 85%;
+        margin: 2% auto;
+    }
+    #payment-hotel div{
+        width:100%;
+        margin:4% auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: center;
+    }
+    #bill{
+        margin: auto;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin:0 2%;
+        margin-bottom:4%;
+        padding: 2% 2%;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+    #payment-details{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width: 768px){
+    main{
+        height:80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        overflow: auto;
+    }
+    #payment-hotel{
+        height:fit-content;
+        width:80%;
+        display:flex;
+        background-color: rgb(132, 136, 139);
+        margin: 0 auto;
+    }
+    #bill{
+        width:95%;
+    }
 }
