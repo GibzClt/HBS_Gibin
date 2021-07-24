@@ -1,37 +1,31 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-div{
-    height: 70px;
-    position: relative;
-    width: 70px;
-    border-radius: 50%;
-    /* top:50%; */
-    /* margin: -70px auto; */
-    /* bottom:50%; */
-    border: 12px solid #f3f3f3;
-    border-top-color: #444444;
-    animation-name: loader;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
+div {
+  height: 70px;
+  position: relative;
+  width: 70px;
+  border-radius: 50%;
+  border: 12px solid #f3f3f3;
+  border-top-color: #444444;
+  animation-name: loader;
+  animation: loader 1s linear infinite forwards;
 }
 
 @keyframes loader {
-    25%{
-        transform: rotate(90deg);
-    }
-    50%{
-        transform: rotate(180deg);
-    }
-    75%{
-        transform: rotate(270deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
