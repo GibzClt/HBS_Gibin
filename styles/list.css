@@ -37,7 +37,7 @@
 }
 
 #lalit-card {
-  float : right;
+  float : left;
 }
 
 #taj-card {
@@ -52,7 +52,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .hotel-card > *:last-child {

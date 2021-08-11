@@ -28,5 +28,14 @@ const cardsToggle = (value) => {
   }
 }
 
-
+const cardSet = document.getElementsByClassName("card-set");
+console.log(cardSet);
+for(let i=0; i < 8; i++){
+  let query = cardSet[i].id.split("-")[0];
+  console.log(query);
+  cardSet[i].onclick = () => {
+    window.location.href = `list.html?city=${query}`;
+  }
+  cardSet[i].style.cursor = "pointer";
+}
 
