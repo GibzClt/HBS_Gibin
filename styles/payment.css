@@ -46,7 +46,7 @@ span {
   border-radius: 5px;
 }
 
-#bill span {
+#bill span:first-of-type {
   padding-bottom: 0;
   font-family: cursive;
   font-weight: bold;
