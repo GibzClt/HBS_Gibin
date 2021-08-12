@@ -39,3 +39,52 @@ for(let i=0; i < 8; i++){
   cardSet[i].style.cursor = "pointer";
 }
 
+//  <....................................................>
+
+
+
+
+
+
+let searchQuery;
+let searchCityOutputs;
+
+
+const cityInput = document.getElementById("city");
+const searchbarEl = document.getElementById("search-bar");
+const searchOptionsList = document.getElementById("search-options-list");
+
+cityInput.addEventListener("input", () => {
+  if(cityInput.value.length >=3){
+    searchQuery = cityInput.value.toLowerCase();
+    let searchCityRequest = new XMLHttpRequest();
+    searchCityRequest.open("GET", `https://travel-advisor.p.rapidapi.com/locations/auto-complete?query=${searchQuery}`);
+    searchCityRequest.setRequestHeader("x-rapidapi-key", "665b7f0bd8msh9c1b1c6e3f27841p1570c6jsn2f3bb22c6dd0");
+    searchCityRequest.setRequestHeader("x-rapidapi-host", "travel-advisor.p.rapidapi.com");
+    searchCityRequest.onreadystatechange = () => {
+      if(searchCityRequest.readyState == 4) {
+        if(searchCityRequest.status == 200){
+          searchCityOutputs = JSON.parse(searchCityRequest.responseText);
+          showOptions(searchCityOutputs.data)
+        }
+      }
+    }
+    searchCityRequest.send();
+  }
+})
+
+function showOptions(cityCode){
+  // searchOptions.style.display = "block";
+  searchOptionsList.innerHTML = "";
+  for(let i = 0; i < cityCode.length; i++){
+    if(cityCode[i].result_type === "geos"){
+      let tempurl = `list.html?city=${cityCode[i].result_object.name}`;
+      searchOptionsList.innerHTML += 
+        `<a href=${tempurl}><div class="search-options">${cityCode[i].result_object.name}</div><a>`;
+    }
+  }
+}
+
+window.addEventListener("click", () => {
+  searchOptionsList.innerHTML = "";
+})

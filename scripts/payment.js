@@ -2,6 +2,7 @@ const paynowBtn = document.getElementById("paynow-btn");
 
 paynowBtn.onclick = () => {
   location.href = "payment.html";
+  alert("Hotel successfully booked !");
 }
 
 const paynowBtnToggle = () => {
@@ -42,7 +43,7 @@ let paymentItem = sessionStorage.getItem("hotelId");
 let paymentRequest = new XMLHttpRequest();
 let paymentUrl = `https://travel-advisor.p.rapidapi.com/hotels/get-details?location_id=${paymentItem}`;
 paymentRequest.open("GET", paymentUrl);
-paymentRequest.setRequestHeader("x-rapidapi-key", "363d392d78msh20026b413316ea3p17ba45jsn1dd4c8599979");
+paymentRequest.setRequestHeader("x-rapidapi-key", "665b7f0bd8msh9c1b1c6e3f27841p1570c6jsn2f3bb22c6dd0");
 paymentRequest.setRequestHeader("x-rapidapi-host", "travel-advisor.p.rapidapi.com");
 paymentRequest.onreadystatechange = () => {
   if(paymentRequest.readyState == 4){
