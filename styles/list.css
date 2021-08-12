@@ -53,6 +53,7 @@
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: nowrap;
+  float:left;
 }
 
 .hotel-card > *:last-child {

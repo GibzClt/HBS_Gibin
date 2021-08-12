@@ -31,7 +31,7 @@ loginEl.innerHTML =
     </buttom>
   </div>
   <div class="modal-body">
-    <form id="login-form" action = "index.html">
+    <form id="login-form" action = "#">
       <div class="form-group">
         <label for ="email">Email Address</label>
           <input id="email" name="email" type="email" class="form-control" required placeholder="yourname@email.com" autocomplete="off">
@@ -133,3 +133,18 @@ if(localStorage.getItem("Login") === "true"){
   headerLogin.innerText = "Login";
   headerLogin.dataset.target = "#loginModal";
 }
+
+// <-------------------LOADER --------------->
+
+const loaderTemplate = 
+`<div id="loader">
+<div id="loader-icon">
+</div>        
+</div>`;
+
+const loaderDiv = document.getElementById("loader-div");
+loaderDiv.innerHTML = loaderTemplate;
+
+window.addEventListener("load", ()=>{
+  loaderDiv.className += " hidden";
+})

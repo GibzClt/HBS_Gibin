@@ -9,7 +9,7 @@ const request = new XMLHttpRequest();
 let url = `https://travel-advisor.p.rapidapi.com/locations/search?query=${searchItem}&limit=30&offset=0&units=km&location_id=1&currency=USD&sort=relevance&lang=en_US`;
 
 request.open("GET", url);
-request.setRequestHeader("x-rapidapi-key", "363d392d78msh20026b413316ea3p17ba45jsn1dd4c8599979");
+request.setRequestHeader("x-rapidapi-key", "665b7f0bd8msh9c1b1c6e3f27841p1570c6jsn2f3bb22c6dd0");
 request.setRequestHeader("x-rapidapi-host", "travel-advisor.p.rapidapi.com");
 
 let hotelOutput
@@ -21,10 +21,14 @@ request.onreadystatechange = () =>{
 		if(request.status == 200){
 			hotelOutput = JSON.parse(request.responseText);
 			console.log(hotelOutput);
+			debugger;
 			for(let i = 1; i < hotelOutput.data.length; i++){
+				debugger;
 				if(hotelOutput.data[i].result_type ==="lodging"){
+					debugger;
 					locationId = hotelOutput.data[i].result_object.location_id;
 					hotelData = hotelOutput.data[i];
+					console.log(hotelData);
 					getHotels(hotelData, locationId);
 				}
 			}
@@ -36,17 +40,20 @@ request.send();
 
 
 function getHotels(hotel, location){
-	listViewContent.innerHTML += 
-		`<div class="hotel-card" id = "${location}-card">
-		<div>
-			<img src = ${hotel.result_object.photo.images.large.url} alt = "${hotel.result_object.name}">
-		</div>
-		<div class="hotel-desc">
-			<h3>${hotel.result_object.name}</h3>
-			<p>Rating : ${hotel.result_object.rating}</p>
-			<p>${hotel.result_object.address}</p>
-		</div>
-		</div>`;
+	debugger;
+	if(hotel.result_object.hasOwnProperty("photo") && hotel.result_object.hasOwnProperty("rating")) {
+		listViewContent.innerHTML += 
+			`<div class="hotel-card" id = "${location}-card">
+			<div>
+				<img src = ${hotel.result_object.photo.images.large.url} alt = ${hotel.result_object.name}>
+			</div>
+			<div class="hotel-desc">
+				<h3>${hotel.result_object.name}</h3>
+				<p>Rating : ${hotel.result_object.rating}</p>
+				<p>${hotel.result_object.address}</p>
+			</div>
+			</div>`;
+	}
 }
 
 

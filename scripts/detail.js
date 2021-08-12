@@ -6,7 +6,7 @@ let detailRequest = new XMLHttpRequest();
 let detailUrl = `https://travel-advisor.p.rapidapi.com/hotels/get-details?location_id=${hotelItem}`
 
 detailRequest.open("GET", detailUrl );
-detailRequest.setRequestHeader("x-rapidapi-key", "363d392d78msh20026b413316ea3p17ba45jsn1dd4c8599979");
+detailRequest.setRequestHeader("x-rapidapi-key", "665b7f0bd8msh9c1b1c6e3f27841p1570c6jsn2f3bb22c6dd0");
 detailRequest.setRequestHeader("x-rapidapi-host", "travel-advisor.p.rapidapi.com");
 
 let hotelDetails
@@ -25,7 +25,14 @@ detailRequest.send()
 function updateHotelDetails(hotel){
   let hotelName = document.getElementById("description");
   let amenities = "";
-  for(let i = 0; i < 8; i++){
+  let amenitiesLength;
+  if(hotel.data[0].amenities.length < 8){
+    amenitiesLength = hotel.data[0].amenities.length;
+  } else{
+    amenitiesLength = 8;
+  }
+  for(let i = 0; i < amenitiesLength; i++){
+    debugger;
     amenities += 
     `<li>${hotel.data[0].amenities[i].name}</li>`
   }
@@ -44,7 +51,7 @@ function updateCarousal(hotel){
   let carousalRequest = new XMLHttpRequest();
   let carousalUrl = `https://travel-advisor.p.rapidapi.com/photos/list?location_id=${hotel.data[0].location_id}&limit=10`
   carousalRequest.open("GET", carousalUrl);
-  carousalRequest.setRequestHeader("x-rapidapi-key", "363d392d78msh20026b413316ea3p17ba45jsn1dd4c8599979");
+  carousalRequest.setRequestHeader("x-rapidapi-key", "665b7f0bd8msh9c1b1c6e3f27841p1570c6jsn2f3bb22c6dd0");
   carousalRequest.setRequestHeader("x-rapidapi-host", "travel-advisor.p.rapidapi.com");
   carousalRequest.onreadystatechange = () =>{
     if(carousalRequest.readyState == 4){
@@ -100,6 +107,12 @@ const calculateTotal = (adults, start , end, cost = 1000) => {
   let days = parseInt(endDate[2] - startDate[2]);
   let months = parseInt(endDate[1] - startDate[1]);
   let years = parseInt(endDate[0] - startDate[0]);
+  let today = new Date();
+  if(today.getMonth() < 10){
+    checkInDate.min = today.getFullYear() + "-" + "0" + (today.getMonth() + 1) + "-" + today.getDate();
+  } else{
+    checkInDate.min = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
+  }
   let date = new Date(parseInt(startDate[0]), parseInt(startDate[1]) - 1, parseInt(startDate[2]));
   date.setDate(date.getDate() + 1);
   if((date.getMonth() + 1) < 10 ){
