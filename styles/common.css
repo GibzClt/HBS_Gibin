@@ -43,10 +43,10 @@ body {
   border: 12px solid #f3f3f3;
   border-top-color: #444444;
   border-right-color: #444444;
-  border-left-color:deeppink;
-  border-bottom-color:deeppink;
-  animation-name: loader;
-  animation: loader 1s linear infinite forwards;
+  border-left-color: deeppink;
+  border-bottom-color: deeppink;
+  animation: loader 1s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes loader {
@@ -63,9 +63,6 @@ body {
     transform: rotate(360deg);
   }
 }
-
-
-
 
 /* Header section */
 #logo {

@@ -1,20 +1,17 @@
-
+// Getting the hotel id from the url
 let hotelItem = window.location.href.split("?")[1].split("=")[1];
-console.log(hotelItem)
 
 let detailRequest = new XMLHttpRequest();
 let detailUrl = `https://travel-advisor.p.rapidapi.com/hotels/get-details?location_id=${hotelItem}`
-
-detailRequest.open("GET", detailUrl );
+detailRequest.open("GET", detailUrl);
 detailRequest.setRequestHeader("x-rapidapi-key", "665b7f0bd8msh9c1b1c6e3f27841p1570c6jsn2f3bb22c6dd0");
 detailRequest.setRequestHeader("x-rapidapi-host", "travel-advisor.p.rapidapi.com");
 
-let hotelDetails
+let hotelDetails; //Hotel details returned by the Travel Advisor API
 detailRequest.onreadystatechange = () => {
   if(detailRequest.readyState == 4){
     if(detailRequest.status == 200){
       hotelDetails = JSON.parse(detailRequest.responseText);
-      console.log(hotelDetails);
       updateHotelDetails(hotelDetails);
       updateCarousal(hotelDetails);
     }
@@ -22,6 +19,7 @@ detailRequest.onreadystatechange = () => {
 }
 detailRequest.send()
 
+// Populating hotel details on the page
 function updateHotelDetails(hotel){
   let hotelName = document.getElementById("description");
   let amenities = "";
@@ -32,7 +30,6 @@ function updateHotelDetails(hotel){
     amenitiesLength = 8;
   }
   for(let i = 0; i < amenitiesLength; i++){
-    debugger;
     amenities += 
     `<li>${hotel.data[0].amenities[i].name}</li>`
   }
@@ -47,6 +44,7 @@ function updateHotelDetails(hotel){
   <p>${hotel.data[0].description}</p>`;
 }
 
+// Updating the carousal images with respect to the selected hotel
 function updateCarousal(hotel){
   let carousalRequest = new XMLHttpRequest();
   let carousalUrl = `https://travel-advisor.p.rapidapi.com/photos/list?location_id=${hotel.data[0].location_id}&limit=10`
@@ -57,11 +55,9 @@ function updateCarousal(hotel){
     if(carousalRequest.readyState == 4){
       if(carousalRequest.status == 200){
         let carousalOutput = JSON.parse(carousalRequest.responseText);
-        console.log(carousalOutput);
         let carousalDiv = document.getElementsByClassName("carousel-inner")[0];
         let carousalContent = "";
         for(let j = 0; j < carousalOutput.data.length; j++){
-          console.log(carousalOutput.data[j].images.large)
           if(j === 0){
             carousalContent += 
               `<div class="carousel-item active">
@@ -81,7 +77,7 @@ function updateCarousal(hotel){
   carousalRequest.send();
 }
 
-
+// Entry of details to book the hotel
 const bookBtn = document.getElementById("book");
 bookBtn.addEventListener("click", ()=> {
   sessionStorage.setItem("adults", document.getElementById("number-adults").value)
@@ -92,15 +88,12 @@ bookBtn.addEventListener("click", ()=> {
   sessionStorage.setItem("hotelId", hotelItem)
 })
 
-
-// <--------------------------------------------------->
-
-
 const NoOfAdults = document.getElementById("number-adults");
 const checkInDate = document.getElementById("checkin-date");
 const checkOutDate = document.getElementById("checkout-date");
 const totalField = document.getElementById("total");
 
+// Function to calculate the total cost and to get valid dates
 const calculateTotal = (adults, start , end, cost = 1000) => {
   let startDate = start.value.split("-");
   let endDate = end.value.split("-");
@@ -125,7 +118,6 @@ const calculateTotal = (adults, start , end, cost = 1000) => {
 }
 
 const formEl = document.getElementById("detail-form");
-
 formEl.addEventListener("input", () => {
   let totalCost = calculateTotal(NoOfAdults, checkInDate, checkOutDate);
   if(!isNaN(totalCost)){
